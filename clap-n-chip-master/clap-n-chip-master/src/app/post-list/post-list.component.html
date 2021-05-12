@@ -1,0 +1,49 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+
+<div *ngIf="postToDisplay">
+  <div *ngFor="let post of postToDisplay">
+    <div class="container">
+      <article>
+        <div class="content">
+          <section>
+            <div class="card">
+              <div class="card-title">
+                <div class="card-avatar"></div>
+                <div class="example-title" (click)="getArtistPostfolio(post.artist_id)" >{{post.artist_name}}</div>
+              </div>
+              <div class="card-photo">
+              </div>
+              <div class="card-footer">
+                <div class="Instagram-card-content">
+                  <p class="Likes">{{post.claps_count}} Claps</p>
+                  <iframe [src]="post.youtube_url" frameborder="0" allowfullscreen width="555px"
+                    height="300px"></iframe>
+
+                  <p><a class="Instagram-card-content-user"
+                      href="https://www.instagram.com/rogersbase/">{{post.artist_name}}</a>
+                    {{post.post_description}}🎉</p>
+                  <hr>
+                </div>
+                <div class="controls" style="display:inline-block">
+
+                  <button class="button button-like" (click)="clap(post.id)" style="margin-top: 5px">Clap &nbsp;<i
+                      class="fas fa-sign-language"></i></button>
+                  <button class="button button-like" style="margin-top: 5px; margin-left: 30px">Chipped Amount:
+                    {{post.totalChipAmount}}</button>
+
+                  <form style="display: inline-block" [formGroup]="chipAmountForm" (ngSubmit)="onSubmit(post.id)" class="form-horizontal">
+                    <input type="number" size="4" style="margin-top: 8px; margin-left: 70px; border-radius: 40px; width: 80px; height: 55px;" formControlName="amount">
+                    <button class="button button-like" type="submit" style="margin-top: 5px;">Chip</button>
+                  </form>
+                </div>
+
+                <div class="Instagram-card-footer">
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,41 @@
+<link
+  href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+  rel="stylesheet"
+  id="bootstrap-css">
+<script
+  src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<div style="border: 1px solid grey; margin:40px;">
+<div id="legend">
+  <legend style="text-align: center" class="">Create New Post</legend>
+</div>
+
+<form [formGroup]="createPostForm" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">Embedded Post URL</label>
+      <div class="controls">
+        <textarea type="text" rows="1" cols="70" class="input-xlarge" formControlName="embedded_post_url"></textarea>
+        <p class="help-block">Here you can upload the embedder post from Facebook, Youtube, Instagram</p>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Post Description</label>
+      <div class="controls">
+        <textarea type="text" rows="5" cols="70" class="input-xlarge" formControlName="post_description"></textarea>
+      </div>
+    </div>
+
+    <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-primary" (click)="hideCreatePost()">Cancel</button>
+          <button class="btn btn-success" [disabled]="!createPostForm.valid" style="margin-left:25px">Upload Post</button>
+
+        </div>
+        
+      </div>
+  </fieldset>
+</form>
+</div>

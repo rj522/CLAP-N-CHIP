@@ -1,0 +1,57 @@
+<div *ngIf="editPortfolioForm" style="margin-left: 20px; text-align: center">
+<h5>Edit your portfolio here!</h5>
+<form [formGroup]="editPortfolioForm" (ngSubmit)="updateData()" class="form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">Story</label>
+      <div class="controls">
+        <textarea rows="7" cols="70" type="text" class="input-xlarge" formControlName="story"></textarea>
+      </div>
+    </div>
+<br>
+    <div class="control-group">
+      <label class="control-label">Values and Vision</label>
+      <div class="controls">
+          <textarea rows="7" cols="70" type="text" class="input-xlarge" formControlName="values"></textarea>
+      </div>
+    </div>
+    <br>
+
+    <div class="control-group">
+      <label class="control-label">Note for your Donors</label>
+      <div class="controls">
+          <textarea rows="7" cols="70" type="text" class="input-xlarge" formControlName="note"></textarea>
+      </div>
+    </div>
+    <br>
+
+    <div class="control-group">
+      <label class="control-label">Youtube Page</label>
+      <div class="controls">
+          <textarea rows="1" cols="70" type="text" class="input-xlarge" formControlName="youtube_url"></textarea>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Instagram Page</label>
+      <div class="controls">
+          <textarea rows="1" cols="70" type="text" class="input-xlarge" formControlName="instagram_url"></textarea>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Facebook Page</label>
+      <div class="controls">
+          <textarea rows="1" cols="70" type="text" class="input-xlarge" formControlName="facebook_url"></textarea>
+      </div>
+    </div>
+
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" type="submit" [disabled]="!editPortfolioForm.valid" style="margin-top: 15px">Update Details</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
+</div>

@@ -1,0 +1,263 @@
+body{
+    background-color: #fafafa;
+    padding: 0px;
+    font-family: 'Droid Sans', sans-serif;
+
+}
+.input-group{
+    width: 50%;
+    padding-right: 0.2%;
+}
+
+a{
+  text-decoration: none;
+}
+.container{
+    align-self: center;
+    width: 80%;
+}
+
+.Instagram-card{
+    background: #ffffff;
+    border: 1px solid #f2f2f2;
+    border-radius: 3px;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    align-self: center;
+}
+
+.Instagram-card-header{
+    padding: 20px;
+    height: 40px;
+}
+
+.Instagram-card-user-image{
+    border-radius: 50%;
+    max-width:600 px;
+    height: 40px;
+    vertical-align: middle;
+}
+
+.Instagram-card-time{
+    float: right;
+    width: 80px;
+    padding-top:10px;
+    text-align: right;
+    color: #999;
+}
+
+.Instagram-card-user-name{
+    margin-left:25px;
+    font-weight:bold;
+  color: #262626;
+}
+
+.Instagram-card-content{
+  padding: 20px;
+}
+
+.Likes{
+  font-weight: bold;
+}
+
+.Instagram-card-content-user{
+  font-weight: bold;
+  color: #262626;
+}
+
+.hashtag{
+  color: #003569;
+}
+
+.comments{
+  color:#999;
+}
+
+.user-comment{
+  color: #003569;
+}
+
+.Instagram-card-footer{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+}
+
+hr{
+  border: none;
+  border-bottom: 1px solid #ccc;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+
+}
+
+
+.footer-action-icons{
+  font-size: 16px;
+  color: #ccc;
+}
+
+.comments-input{
+  border: none;
+  margin-left: 10px;
+  width: 100%;
+  margin-right: 20px;
+}
+body {
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    user-select: none;
+    font-family: 'Roboto';
+}
+
+header {
+    font-family: 'Pacifico';
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,.0975);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70px;
+    min-height: 70px;
+    width: 80%;
+    position: fixed;
+    vertical-align: top;
+    z-index: 2;
+}
+header h2 {
+    font-weight: 300;
+    margin: 0;
+}
+
+article {
+    background-color: #fafafa;
+    flex: 1;
+    max-width: 85%;
+    align-self: center;
+    min-width: 600px;
+}
+
+article .content {
+    max-width: 640px;
+    margin: 0 auto;
+}
+
+article .content section {
+    margin-top: 20px;
+}
+
+.card {
+    max-width: 640px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+}
+
+.card .card-title {
+    border: 1px solid rgba(0,0,0,.0975);
+    height: 26px;
+    padding: 30px;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0rem;
+}
+
+.card .card-title .card-avatar {
+    border-radius: 20%;
+    background-image: url(https://2.bp.blogspot.com/-Utx9L8hs2XU/VaAtznWBhvI/AAAAAAAACXg/8rmB12MZKe4/s400/Screen%2BShot%2B2015-07-11%2Bat%2B08.25.09.png);
+    width: 40px;
+    height: 40px;
+}
+
+.card .card-title .example-title {
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+.card .card-photo {
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    background-image: url(https://i.pinimg.com/originals/b8/16/ae/b816ae6d8da4af8a8e66df7ae497bc10.jpg);
+    height: 100%;
+}
+    .button-like {
+  border: 2px solid #8a8a8a;
+  background-color: transparent;
+  text-decoration: none;
+  padding: 1rem;
+  position: relative;
+  vertical-align: middle;
+  text-align: center;
+  display: inline-block;
+  border-radius: 3rem;
+  color: #8a8a8a;
+  transition: all ease 0.4s;
+  margin-left: 20px;
+}
+
+.button-like span {
+  margin-left: 0.5rem;
+}
+
+.button-like .fas,
+.button-like span {
+  transition: all ease 0.4s;
+
+}
+
+.button-like:focus {
+  background-color: transparent;
+}
+
+.button-like:focus .fas,
+.button-like:focus span {
+  color: #8a8a8a;
+}
+
+.button-like:hover {
+  border-color: #cc4b37;
+  background-color: transparent;
+}
+
+.button-like:hover .fas,
+.button-like:hover span {
+  color: #cc4b37;
+}
+
+.liked {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked .fas,
+.liked span {
+  color: #fefefe;
+}
+
+.liked:focus {
+  background-color: #cc4b37;
+}
+
+.liked:focus .fas,
+.liked:focus span {
+  color: #fefefe;
+}
+
+.liked:hover {
+  background-color: #cc4b37;
+  border-color: #cc4b37;
+}
+
+.liked:hover .fas ,
+.liked:hover span {
+  color: #fefefe;
+}

@@ -1,0 +1,58 @@
+<link
+  href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
+  rel="stylesheet"
+  id="bootstrap-css">
+<script
+  src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div id="legend">
+  <legend style="text-align: center;">Get Fame and Fund</legend>
+</div>
+
+<form [formGroup]="artistform" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">First Name</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" formControlName="firstName">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Last Name</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" formControlName="lastName">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Email</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" formControlName="email">
+      </div>
+    </div>
+
+    <div class="control-group">
+      <label class="control-label">Password</label>
+      <div class="controls">
+        <input type="password" class="input-xlarge" formControlName="password">
+      </div>
+    </div>
+
+    <div class="control-group">
+        <div class="controls">
+        </div>
+      </div>
+
+    <div class="control-group">
+        <!-- Button -->
+        <div class="controls">
+          <button class="btn btn-success" type="submit" [disabled]="!artistform.valid" >Register</button>
+          <button class="btn btn-primary" style="display:inline-block; margin-left: 100px" (click)="gotoArtistLogin()" >Login</button>
+        </div>
+      </div>
+
+      
+  </fieldset>
+</form>

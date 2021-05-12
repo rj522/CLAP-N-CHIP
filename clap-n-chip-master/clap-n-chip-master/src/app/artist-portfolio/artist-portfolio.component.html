@@ -1,0 +1,48 @@
+<div class="controls">
+    <button class="btn btn-primary" (click)="gotoEditPortfolio()" style="float:right; margin:10px">Edit Portfolio</button>
+    <button class="btn btn-success" (click)="createPost()" style="margin:10px">Create Post</button>
+  </div>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div *ngIf="art != undefined">
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h2>My Story</h2><br>
+        <p>{{ art[0]?.portfolio.story}}</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="container-fluid bg-grey">
+    <div class="row">
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-globe logo slideanim"></span>
+      </div>
+      <div class="col-sm-8">
+        <h2>Vaules and Vision</h2><br>
+        <p><strong>VISION:</strong> {{art[0]?.portfolio.values}}</p>
+      </div>
+    </div>
+  </div>
+
+  <div id="about" class="container-fluid">
+    <div class="row">
+      <div class="col-sm-8">
+        <h3>Note for Donors</h3><br>
+        <p>{{art[0]?.portfolio.note}}</p>
+      </div>
+      <div class="col-sm-4">
+        <span class="glyphicon glyphicon-signal logo"></span>
+      </div>
+    </div>
+  </div>
+  <h5>Connect on social Media with me!</h5>
+  <button type="button" mdbBtn class="btn-fb waves-light" (click)="gotoFacebook()" mdbWavesEffect><i class="fab fa-facebook-f left"></i>Facebook</button>
+  <button type="button" mdbBtn class="btn-yt waves-light" (click)="gotoYoutube()" mdbWavesEffect><i class="fab fa-youtube left"></i>Youtube</button>
+  <button type="button" mdbBtn class="btn-ins waves-light" (click)="gotoInstagram()" mdbWavesEffect><i class="fab fa-instagram left"></i>Instagram</button>
+</div>

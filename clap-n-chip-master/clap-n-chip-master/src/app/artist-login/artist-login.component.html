@@ -1,0 +1,40 @@
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css" rel="stylesheet"
+  id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<div id="legend">
+  <legend style="text-align:center">Get your passion going!!!</legend>
+</div>
+{{ errorMessage }}
+<form [formGroup]="artistLoginform" (ngSubmit)="onSubmit()" class="form-horizontal">
+  <fieldset>
+    <div class="control-group">
+      <label class="control-label">Email</label>
+      <div class="controls">
+        <input type="text" class="input-xlarge" width="50px" formControlName="email">
+      </div>
+    </div>
+
+    <div class="control-group">
+        <label class="control-label">Password</label>
+        <div class="controls">
+          <input type="password" class="input-xlarge" size="5" formControlName="password">
+        </div>
+      </div>
+
+    <!-- <div class="control-group">
+      <label class="control-label">Password</label>
+      <div class="controls">
+        <input type="password" class="input-xlarge" hidden>
+      </div>
+    </div> -->
+
+    <div class="control-group">
+      <!-- Button -->
+      <div class="controls">
+        <button class="btn btn-success" type="submit" [disabled]="!artistLoginform.valid">Login</button>
+      </div>
+    </div>
+  </fieldset>
+</form>
